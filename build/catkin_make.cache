@@ -1,0 +1,2 @@
+beginner_tutorials:ros_tutorials_python:ros_tutorials_service:turtlesim_assignment:turtlesim_cleaner
+-DCATKIN_DEVEL_PREFIX=/home/jhmbabo/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jhmbabo/catkin_ws/install -G Unix Makefiles

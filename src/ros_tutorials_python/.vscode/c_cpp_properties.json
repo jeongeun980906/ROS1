@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/jhmbabo/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/jhmbabo/catkin_ws/src/beginner_tutorials/include/**",
+        "/home/jhmbabo/catkin_ws/src/ros_tutorials_service/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ]
+}
