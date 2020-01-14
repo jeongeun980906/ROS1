@@ -58,11 +58,12 @@ int main(int argc,char **argv){
     rotate(degrees2radians(angular_speed),degrees2radians(relative_angle),colockwise);
     
     setDesiredOrientation(degrees2radians(120));*/
-
+    
     ros::Rate loop(0.5);
     turtlesim::Pose pose;
-    pose.x=1;
-    pose.y=1;
+    n.getParam("x_goal",pose.x);
+    n.getParam("y_goal",pose.y);
+    
     pose.theta=0;
     moveGoal(pose,0.01);
 
