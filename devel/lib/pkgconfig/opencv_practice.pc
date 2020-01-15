@@ -1,0 +1,8 @@
+prefix=/home/jhmbabo/catkin_ws/devel
+
+Name: opencv_practice
+Description: Description of opencv_practice
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jhmbabo/catkin_ws/devel/lib -lopencv_practice
+Requires: rospy std_msgs message_runtime

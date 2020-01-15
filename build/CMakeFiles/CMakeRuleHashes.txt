@@ -48,6 +48,7 @@ bf5e8c3c2ff46b297957e40a15e2a51e /home/jhmbabo/catkin_ws/devel/share/gennodejs/r
 3a10b31f0b59a61a58bdeb7ebff5eb76 /home/jhmbabo/catkin_ws/devel/share/gennodejs/ros/ros_tutorials_python/msg/Num.js
 7def6b80a116c0c5c5b772e528ce5b5f /home/jhmbabo/catkin_ws/devel/share/gennodejs/ros/ros_tutorials_service/srv/SrvTutorial.js
 a1137860ab7d169f10691af163c9bfa1 /home/jhmbabo/catkin_ws/devel/share/roseus/ros/beginner_tutorials/manifest.l
+2f25156346331ddbca007d2d32932826 /home/jhmbabo/catkin_ws/devel/share/roseus/ros/opencv_practice/manifest.l
 bcb4f417ceca6d7b82e31e91e834f8ee /home/jhmbabo/catkin_ws/devel/share/roseus/ros/ros_essentials_cpp/manifest.l
 c73aeebeedf10f43a0fafa3d4e8e5751 /home/jhmbabo/catkin_ws/devel/share/roseus/ros/ros_essentials_cpp/msg/FibonacciAction.l
 ff67a76e475e5647453101d04bb81495 /home/jhmbabo/catkin_ws/devel/share/roseus/ros/ros_essentials_cpp/msg/FibonacciActionFeedback.l
@@ -64,6 +65,7 @@ eadba2e1d86c8823a73b13e478502e9e /home/jhmbabo/catkin_ws/devel/share/roseus/ros/
 721285131a6682b0fa02a524534f4260 /home/jhmbabo/catkin_ws/devel/share/roseus/ros/ros_tutorials_service/srv/SrvTutorial.l
 2624f00772db98458cd3ad057afda00c CMakeFiles/clean_test_results
 7669f12345c5ac1234ed00e8a9ffed1a beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus
+71ebdff58df1129c935cb216312511b6 opencv_practice/CMakeFiles/opencv_practice_generate_messages_eus
 a5289567c973fdae84c64dd9a20b6b8f ros_tutorials_python/CMakeFiles/_ros_tutorials_python_generate_messages_check_deps_Num
 993526418f72200d485e37a3a840521f ros_tutorials_python/CMakeFiles/ros_tutorials_python_generate_messages_cpp
 993526418f72200d485e37a3a840521f ros_tutorials_python/CMakeFiles/ros_tutorials_python_generate_messages_eus
