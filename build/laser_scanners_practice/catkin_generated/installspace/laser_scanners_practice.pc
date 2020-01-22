@@ -1,0 +1,8 @@
+prefix=/home/jhmbabo/catkin_ws/install
+
+Name: laser_scanners_practice
+Description: Description of laser_scanners_practice
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jhmbabo/catkin_ws/install/lib 
+Requires: 

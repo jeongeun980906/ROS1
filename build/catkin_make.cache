@@ -1,2 +1,2 @@
-beginner_tutorials:opencv_practice:ros_tutorials_python:ros_tutorials_service:turtlesim_assignment:turtlesim_cleaner
+beginner_tutorials:laser_scanners_practice:opencv_practice:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:ros_tutorials_python:ros_tutorials_service:turtlesim_assignment:turtlesim_cleaner
 -DCATKIN_DEVEL_PREFIX=/home/jhmbabo/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jhmbabo/catkin_ws/install -G Unix Makefiles

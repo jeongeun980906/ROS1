@@ -131,10 +131,13 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/jhmbabo/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/jhmbabo/catkin_ws/build/realsense-ros/realsense2_description/cmake_install.cmake")
   include("/home/jhmbabo/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
+  include("/home/jhmbabo/catkin_ws/build/laser_scanners_practice/cmake_install.cmake")
   include("/home/jhmbabo/catkin_ws/build/opencv_practice/cmake_install.cmake")
   include("/home/jhmbabo/catkin_ws/build/ros_tutorials_python/cmake_install.cmake")
   include("/home/jhmbabo/catkin_ws/build/ros_tutorials_service/cmake_install.cmake")
+  include("/home/jhmbabo/catkin_ws/build/realsense-ros/realsense2_camera/cmake_install.cmake")
   include("/home/jhmbabo/catkin_ws/build/turtlesim_assignment/cmake_install.cmake")
   include("/home/jhmbabo/catkin_ws/build/turtlesim_cleaner/cmake_install.cmake")
 
