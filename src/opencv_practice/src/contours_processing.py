@@ -35,11 +35,12 @@ def process_contours(binary_image,rgb_image,contours):
         area=cv2.contourArea(c)
         perimeter=cv2.arcLength(c,True)
         ((x,y),radius)=cv2.minEnclosingCircle(c)
-        cv2.drawContours(rgb_image,[c],-1,(150,250,250),1)
-        cv2.drawContours(black_image,[c],-1,(150,250,150),1)
-        cx,cy=get_contour_center(c)
-        cv2.circle(rgb_image,(cx,cy),(int)(radius),(0,0,255),1)
-        cv2.circle(black_image,(cx,cy),int(radius),(0,0,255),1)
+        if (area>10):
+            cv2.drawContours(rgb_image,[c],-1,(150,250,250),1)
+            cv2.drawContours(black_image,[c],-1,(150,250,150),1)
+            cx,cy=get_contour_center(c)
+            cv2.circle(rgb_image,(cx,cy),(int)(radius),(0,0,255),1)
+            cv2.circle(black_image,(cx,cy),int(radius),(0,0,255),1)
         print("Area:{}, preimeter={}".format(area,perimeter))
     print("number of contours: {}".format(len(contours)))
     cv2.imshow("RGB Image Contours",rgb_image)
@@ -57,10 +58,10 @@ def get_contour_center(contour):
 
 
 def main():
-    image_name="/home/jhmbabo/catkin_ws/src/opencv_practice/src/image/shapes2.jpg"
+    image_name="/home/jhmbabo/catkin_ws/src/opencv_practice/src/image/tennisball01.jpg"
     rgb_image=read_rbg_image(image_name,True)
     gray_image=convert_rgb_to_gray(rgb_image,True)
-    binary_image=convert_gray_to_binary(gray_image,False,True)
+    binary_image=convert_gray_to_binary(gray_image,True,True)
     countours=getContours(binary_image)
     process_contours(binary_image,rgb_image,countours)
 
