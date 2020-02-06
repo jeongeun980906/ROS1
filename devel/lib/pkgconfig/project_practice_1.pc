@@ -1,0 +1,8 @@
+prefix=/home/jhmbabo/catkin_ws/devel
+
+Name: project_practice_1
+Description: Description of project_practice_1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib -lproject_practice_1
+Requires: rospy std_msgs message_runtime

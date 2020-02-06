@@ -4,5 +4,5 @@ Name: turtlesim_assignment
 Description: Description of turtlesim_assignment
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/jhmbabo/catkin_ws/install/lib -lturtlesim_assignment
+Libs: -L${prefix}/lib -lturtlesim_assignment
 Requires: rospy std_msgs geometry_msgs message_runtime
