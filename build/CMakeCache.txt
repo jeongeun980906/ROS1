@@ -937,10 +937,10 @@ project_practice_1_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/project_pract
 project_practice_1_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/project_practice_1
 
 //Value Computed by CMake
-quaternion_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/tf_practice
+quaternion_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/tf_practice2
 
 //Value Computed by CMake
-quaternion_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/tf_practice
+quaternion_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/tf_practice2
 
 //The directory containing a CMake configuration file for realsense2.
 realsense2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/realsense2
@@ -1043,6 +1043,12 @@ tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
+
+//Value Computed by CMake
+tf_practice2_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/tf_practice2
+
+//Value Computed by CMake
+tf_practice2_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/tf_practice2
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/melodic/share/trajectory_msgs/cmake
