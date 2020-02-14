@@ -232,6 +232,15 @@
 /home/jhmbabo/catkin_ws/build/project_practice_1/CMakeFiles/test.dir
 /home/jhmbabo/catkin_ws/build/project_practice_1/CMakeFiles/rebuild_cache.dir
 /home/jhmbabo/catkin_ws/build/project_practice_1/CMakeFiles/list_install_components.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/install/strip.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/install.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/rplidarNodeClient.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/rplidarNode.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/edit_cache.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/install/local.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/test.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/list_install_components.dir
+/home/jhmbabo/catkin_ws/build/rplidar_ros/CMakeFiles/rebuild_cache.dir
 /home/jhmbabo/catkin_ws/build/realsense-ros/realsense2_camera/CMakeFiles/list_install_components.dir
 /home/jhmbabo/catkin_ws/build/realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_genpy.dir
 /home/jhmbabo/catkin_ws/build/realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_gennodejs.dir

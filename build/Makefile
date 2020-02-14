@@ -1754,6 +1754,32 @@ project_practice_1_generate_messages_py/fast:
 .PHONY : project_practice_1_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named rplidarNodeClient
+
+# Build rule for target.
+rplidarNodeClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNodeClient
+.PHONY : rplidarNodeClient
+
+# fast build rule for target.
+rplidarNodeClient/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
+.PHONY : rplidarNodeClient/fast
+
+#=============================================================================
+# Target rules for targets named rplidarNode
+
+# Build rule for target.
+rplidarNode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNode
+.PHONY : rplidarNode
+
+# fast build rule for target.
+rplidarNode/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
+.PHONY : rplidarNode/fast
+
+#=============================================================================
 # Target rules for targets named realsense2_camera_genpy
 
 # Build rule for target.
@@ -3253,6 +3279,8 @@ help:
 	@echo "... project_practice_1_gennodejs"
 	@echo "... project_practice_1_generate_messages_nodejs"
 	@echo "... project_practice_1_generate_messages_py"
+	@echo "... rplidarNodeClient"
+	@echo "... rplidarNode"
 	@echo "... realsense2_camera_genpy"
 	@echo "... realsense2_camera_gennodejs"
 	@echo "... realsense2_camera_generate_messages_nodejs"
