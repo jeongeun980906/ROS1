@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(project_practice_1_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/jhmbabo/catkin_ws/devel/include " STREQUAL " ")
   set(project_practice_1_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/jhmbabo/catkin_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")

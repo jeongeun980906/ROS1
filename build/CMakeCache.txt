@@ -1129,6 +1129,12 @@ turtlebot3_teleop_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/tur
 turtlebot3_teleop_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/turtlebot3_teleop
 
 //Value Computed by CMake
+turtlebot_practice_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot_practice
+
+//Value Computed by CMake
+turtlebot_practice_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot_practice
+
+//Value Computed by CMake
 turtlesim_assignment_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlesim_assignment
 
 //Value Computed by CMake
@@ -1479,7 +1485,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=28
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=29
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -1,0 +1,10 @@
+(cl:defpackage project_practice_1-srv
+  (:use )
+  (:export
+   "PROJECT_PRACTICE1"
+   "<PROJECT_PRACTICE1-REQUEST>"
+   "PROJECT_PRACTICE1-REQUEST"
+   "<PROJECT_PRACTICE1-RESPONSE>"
+   "PROJECT_PRACTICE1-RESPONSE"
+  ))
+

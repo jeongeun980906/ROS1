@@ -4,6 +4,7 @@ import cv2
 
 def read_rbg_image(image_name,show):
     rgb_image=cv2.imread(image_name)
+    rgb_image=cv2.resize(rgb_image,(240,240),interpolation=cv2.INTER_CUBIC)
     if show:
         cv2.imshow('RGB_image',rgb_image)
     return rgb_image
@@ -36,7 +37,7 @@ def draw_contours(image,contours,image_name):
     cv2.imshow(image_name,image)
 
 def main():
-    image_name="/home/jhmbabo/catkin_ws/src/opencv_practice/src/image/shapes.png"
+    image_name="/home/jhmbabo/catkin_ws/src/numpy_tutorial/src/img/image_3.jpg"
     rgb_image=read_rbg_image(image_name,True)
     gray_image=convert_rgb_to_gray(rgb_image,True)
     binary_image=convert_gray_to_binary(gray_image,True,True)

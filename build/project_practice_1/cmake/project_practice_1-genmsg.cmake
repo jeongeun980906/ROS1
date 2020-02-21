@@ -1,8 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(WARNING "Invoking generate_messages() without having added any message or service file before.
-You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
-message(STATUS "project_practice_1: 0 messages, 0 services")
+message(STATUS "project_practice_1: 0 messages, 1 services")
 
 set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -19,6 +17,11 @@ add_custom_target(project_practice_1_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv" NAME_WE)
+add_custom_target(_project_practice_1_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "project_practice_1" "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -27,6 +30,12 @@ add_custom_target(project_practice_1_generate_messages ALL)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_cpp(project_practice_1
+  "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/project_practice_1
+)
 
 ### Generating Module File
 _generate_module_cpp(project_practice_1
@@ -40,6 +49,8 @@ add_custom_target(project_practice_1_generate_messages_cpp
 add_dependencies(project_practice_1_generate_messages project_practice_1_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv" NAME_WE)
+add_dependencies(project_practice_1_generate_messages_cpp _project_practice_1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(project_practice_1_gencpp)
@@ -52,6 +63,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS project_practice_1_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_eus(project_practice_1
+  "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/project_practice_1
+)
 
 ### Generating Module File
 _generate_module_eus(project_practice_1
@@ -65,6 +82,8 @@ add_custom_target(project_practice_1_generate_messages_eus
 add_dependencies(project_practice_1_generate_messages project_practice_1_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv" NAME_WE)
+add_dependencies(project_practice_1_generate_messages_eus _project_practice_1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(project_practice_1_geneus)
@@ -77,6 +96,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS project_practice_1_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_lisp(project_practice_1
+  "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/project_practice_1
+)
 
 ### Generating Module File
 _generate_module_lisp(project_practice_1
@@ -90,6 +115,8 @@ add_custom_target(project_practice_1_generate_messages_lisp
 add_dependencies(project_practice_1_generate_messages project_practice_1_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv" NAME_WE)
+add_dependencies(project_practice_1_generate_messages_lisp _project_practice_1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(project_practice_1_genlisp)
@@ -102,6 +129,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS project_practice_1_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_nodejs(project_practice_1
+  "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/project_practice_1
+)
 
 ### Generating Module File
 _generate_module_nodejs(project_practice_1
@@ -115,6 +148,8 @@ add_custom_target(project_practice_1_generate_messages_nodejs
 add_dependencies(project_practice_1_generate_messages project_practice_1_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv" NAME_WE)
+add_dependencies(project_practice_1_generate_messages_nodejs _project_practice_1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(project_practice_1_gennodejs)
@@ -127,6 +162,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS project_practice_1_generate_message
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_py(project_practice_1
+  "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/project_practice_1
+)
 
 ### Generating Module File
 _generate_module_py(project_practice_1
@@ -140,6 +181,8 @@ add_custom_target(project_practice_1_generate_messages_py
 add_dependencies(project_practice_1_generate_messages project_practice_1_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/jhmbabo/catkin_ws/src/project_practice_1/srv/project_practice1.srv" NAME_WE)
+add_dependencies(project_practice_1_generate_messages_py _project_practice_1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(project_practice_1_genpy)
