@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+
+import tensorflow as tf
 import keras
 import rospy 
 import numpy as np
@@ -13,6 +15,7 @@ from project_practice_1.srv import project_practice1Request
 from project_practice_1.srv import project_practice1Response
 
 bridge=CvBridge()
+result=[]
 
 def filter_color(rgb_image,lower_bound_color,upper_bound_color):
     hsv_image=cv2.cvtColor(rgb_image,cv2.COLOR_BGR2HSV)
@@ -41,6 +44,7 @@ def largecontour(rgb_image,contours,hierarchy):
                 #cv2.imshow('temp',temp)
                 new_img.append(temp)
                 num+=1
+                #depth info
     print("number of contours: {}".format(len(contours)))
     cv2.imshow("RGB Image Contours",rgb_image)
     new_img_array=np.asarray(new_img)
@@ -181,7 +185,7 @@ def toBinary(img):
     #cv2.imshow('binary',binary_img)
     return binary_img
 def detection(fine_list,num_img,num,label):
-    model=tf.keras.models.load_model('/home/jhmbabo/catkin_ws/src/numpy_tutorial/src/num_classification.hdf5')
+    model=tf.keras.models.load_model('/home/jhmbabo/catkin_ws/src/project_practice_1/src/num_classification.hdf5')
     prediction=model.predict(num_img)
     print(prediction)
     result=[0]*num
@@ -212,29 +216,55 @@ def callback(ros_image):
         cv_image=bridge.imgmsg_to_cv2(ros_image,"bgr8")
     except CvBridgeError as e:
         print(e)
-    Lower=(0,0,0)
-    Upper=(255,35,255)
+    Lower=(60,100,100)
+    Upper=(80,250,250)
     mask=filter_color(cv_image,Lower,Upper)
     cv2.imshow('mask',mask)
     countours,hierarchy=get_contours(mask)
+    yanglist=yangyang(hierarchy)
     point,num=largecontour(cv_image,countours,hierarchy)
-    num_img=smallcontour(cv_image,countours,hierarchy)
-    fine_list=handle_hierarchy(hierarchy,countours)
+    num_img,x_index=smallcontour(cv_image,countours,hierarchy,yanglist)
+    fine_list=handle_hierarchy(hierarchy,countours,yanglist)
+    label=sunseo(x_index,fine_list)
+    new_num_image=np.zeros((len(num_img),28,28,1))
     #number=np.arange(1,num+1)
     for index,pix in enumerate(num_img):
         print(pix.shape)
-        cv2.imshow('pix',pix)
+        #cv2.imshow('pix',pix)
         binary=toBinary(pix)
         #cv2.imwrite("/home/jhmbabo/catkin_ws/src/numpy_tutorial/src/img/num_image_"+str(i*10+index)+".jpg",binary)
+    global result
+    result=detection(fine_list,new_num_image,num,label)
     
-    cv2.waitKey(5)
+    cv2.waitKey(1)
+    #image_sub.unregister()
+
+def callback_1(ros_image):
+    result=[]
+
+image_sub=rospy.Subscriber("/usb_cam/image_raw",Image,callback_1)
 
 def handler(req):
+    global image_sub
     image_sub=rospy.Subscriber("/usb_cam/image_raw",Image,callback)
+    input_num=req.input
+    for index,res in enumerate(result):
+       if res==input_num:
+            detect=True
+            #depth
+            
+            return project_practice1Response(detect,x,y)
+    detect=False
+    x=0.0
+    y=0.0
+    
+    return project_practice1Response(detect,x,y)
+
 
 def main(args):
     rospy.init_node('preprocessing',anonymous=True)
     server=rospy.Service('num_detection',project_practice1,handler)
+    
     try:
         rospy.spin()
     except KeyboardInterrupt:
