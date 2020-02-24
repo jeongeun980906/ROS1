@@ -13,29 +13,6 @@ from keras import datasets,layers,models
 
 bridge=CvBridge()
 result=[]
-#model = models.Sequential()
-def make_model():
-    (train_images, train_labels), (test_images, test_labels) = datasets.mnist.load_data()
-
-    train_images = train_images.reshape((60000, 28, 28, 1))
-    test_images = test_images.reshape((10000, 28, 28, 1))
-
-    train_images, test_images = train_images / 255.0, test_images / 255.0
-
-    global model
-    model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)))
-    model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-    model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-    model.add(layers.Flatten())
-    model.add(layers.Dense(64, activation='relu'))
-    model.add(layers.Dense(10, activation='softmax'))
-    model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',
-              metrics=['accuracy'])
-
-    model.fit(train_images, train_labels, epochs=5)
 
 def filter_color(rgb_image,lower_bound_color,upper_bound_color):
     hsv_image=cv2.cvtColor(rgb_image,cv2.COLOR_BGR2HSV)
@@ -53,7 +30,7 @@ def largecontour(rgb_image,contours,hierarchy):
     for index,c in enumerate(contours):
         area=cv2.contourArea(c)
         x,y,w,h=cv2.boundingRect(c)
-        if area>200:
+        if area>300:
             cv2.drawContours(rgb_image,[c],-1,(0,255,255),1)
             cv2.rectangle(rgb_image,(x,y),(x+w,y+h),(0,0,255),1)
             print index
@@ -78,7 +55,7 @@ def smallcontour(rgb_image,contours,hierarchy,yanglist):
     for index,c in enumerate(contours):
         area=cv2.contourArea(c)
         x,y,w,h=cv2.boundingRect(c)
-        if area>200:
+        if area>300:
             for yang in yanglist:
                 if hierarchy[0][index][3]==yang:
                     print(yang)
@@ -127,7 +104,7 @@ def handle_hierarchy(hierarchy,contours,yanglist):
     hList=[]
     for index,c in enumerate(contours):
         area=cv2.contourArea(c)
-        if area>200:
+        if area>300:
             hList.append(hierarchy[0][index][3])
     #print(hList)
     fine_list=handle_hlist(hList,yanglist)
@@ -256,6 +233,8 @@ def callback(ros_image):
         #cv2.imshow('pix',pix)
         binary=toBinary(pix)
         cv2.imwrite("/home/jhmbabo/catkin_ws/src/numpy_tutorial/src/img/num_image_"+str(7*10+index)+".jpg",binary)
+        binary=np.reshape(binary,(28,28,1))
+        new_num_image[index]=binary
     global result
     result=detection(fine_list,new_num_image,num,label)
     

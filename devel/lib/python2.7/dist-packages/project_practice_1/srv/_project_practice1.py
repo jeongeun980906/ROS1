@@ -119,6 +119,7 @@ class project_practice1Response(genpy.Message):
   _full_text = """bool result
 float64 x
 float64 y
+
 """
   __slots__ = ['result','x','y']
   _slot_types = ['bool','float64','float64']

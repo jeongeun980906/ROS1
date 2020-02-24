@@ -163,6 +163,7 @@ class project_practice1Response {
     float64 x
     float64 y
     
+    
     `;
   }
 

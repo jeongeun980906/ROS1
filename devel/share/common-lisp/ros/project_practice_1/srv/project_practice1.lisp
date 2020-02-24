@@ -183,10 +183,10 @@
   "7525b31207ccda06e56279e244da6731")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<project_practice1-response>)))
   "Returns full string definition for message of type '<project_practice1-response>"
-  (cl:format cl:nil "bool result~%float64 x~%float64 y~%~%~%"))
+  (cl:format cl:nil "bool result~%float64 x~%float64 y~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'project_practice1-response)))
   "Returns full string definition for message of type 'project_practice1-response"
-  (cl:format cl:nil "bool result~%float64 x~%float64 y~%~%~%"))
+  (cl:format cl:nil "bool result~%float64 x~%float64 y~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <project_practice1-response>))
   (cl:+ 0
      1

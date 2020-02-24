@@ -154,6 +154,7 @@
 bool result
 float64 x
 float64 y
+
 ")
 
 (setf (get project_practice_1::project_practice1Response :md5sum-) "7525b31207ccda06e56279e244da6731")
@@ -164,6 +165,7 @@ float64 y
 bool result
 float64 x
 float64 y
+
 ")
 
 

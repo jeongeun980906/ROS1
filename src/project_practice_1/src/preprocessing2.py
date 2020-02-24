@@ -33,9 +33,9 @@ def largecontour(rgb_image,contours,hierarchy):
     for index,c in enumerate(contours):
         area=cv2.contourArea(c)
         x,y,w,h=cv2.boundingRect(c)
-        if area>200:
-            #cv2.drawContours(rgb_image,[c],-1,(0,255,255),1)
-            #cv2.rectangle(rgb_image,(x,y),(x+w,y+h),(0,0,255),1)
+        if area>300:
+            cv2.drawContours(rgb_image,[c],-1,(0,255,255),1)
+            cv2.rectangle(rgb_image,(x,y),(x+w,y+h),(0,0,255),1)
             print index
             if hierarchy[0][index][3]==-1:
                 #print 'here'
@@ -48,7 +48,7 @@ def largecontour(rgb_image,contours,hierarchy):
     print("number of contours: {}".format(len(contours)))
     cv2.imshow("RGB Image Contours",rgb_image)
     new_img_array=np.asarray(new_img)
-    print(new_img_array.shape)
+    #print(new_img_array.shape)
     return new_img_array,num
 
 def smallcontour(rgb_image,contours,hierarchy,yanglist):
@@ -58,7 +58,7 @@ def smallcontour(rgb_image,contours,hierarchy,yanglist):
     for index,c in enumerate(contours):
         area=cv2.contourArea(c)
         x,y,w,h=cv2.boundingRect(c)
-        if area>100:
+        if area>300:
             for yang in yanglist:
                 if hierarchy[0][index][3]==yang:
                     print(yang)
@@ -67,10 +67,10 @@ def smallcontour(rgb_image,contours,hierarchy,yanglist):
                     temp=cv2.resize(temp,(28,28),interpolation=cv2.INTER_AREA)
                     num_image.append(temp)
                     x_index.append(x)
-                    print(type(num_image))
+                    #print(type(num_image))
         #num_image=num_image[1:,:,:]
     num_image=np.array(num_image)
-    print(num_image.shape)
+    #print(num_image.shape)
     return num_image,x_index
     
 def yangyang(hierarchy):
@@ -107,9 +107,9 @@ def handle_hierarchy(hierarchy,contours,yanglist):
     hList=[]
     for index,c in enumerate(contours):
         area=cv2.contourArea(c)
-        if area>100:
+        if area>300:
             hList.append(hierarchy[0][index][3])
-    print(hList)
+    #print(hList)
     fine_list=handle_hlist(hList,yanglist)
     return fine_list
 
@@ -119,7 +119,7 @@ def handle_hlist(hlist,yanglist):
         if h==-1:
             index.append(i)
     
-    print('index',index)
+    #print('index',index)
     fine_list=[]
     count=0
     c2=0
@@ -130,7 +130,7 @@ def handle_hlist(hlist,yanglist):
             new_list=hlist
         else:  
             new_list=hlist[index[j-1]:index[j]]
-        print('new_list',new_list)
+        #print('new_list',new_list)
         
         for i in new_list:
             for y in yanglist:
@@ -145,7 +145,7 @@ def handle_hlist(hlist,yanglist):
             fine_list.append(count)    
             if j==len(index)-1:
                 new_list2=hlist[index[j]:]
-                print(new_list2)
+                #print(new_list2)
                 for i in new_list2:
                     for y in yanglist:
                         if i==y:
@@ -168,15 +168,15 @@ def sunseo(x_index,fine_list):
         sort_x=copy.deepcopy(temp_x)
         sort_x.sort()
         sort_x.reverse()
-        print(sort_x)
-        print(type(sort_x))
+        #print(sort_x)
+        #print(type(sort_x))
         for a,x in enumerate(temp_x):
             for s,s_x in enumerate(sort_x):
                 if s_x==x:
                     temp_list[a]=s
                     print(s)
         label.append(temp_list)
-    print(label)
+    print('label',label)
     return label
 
 def toBinary(img):
@@ -185,15 +185,17 @@ def toBinary(img):
     #cv2.imshow('binary',binary_img)
     return binary_img
 def detection(fine_list,num_img,num,label):
-    model=tf.keras.models.load_model('/home/jhmbabo/catkin_ws/src/project_practice_1/src/num_classification.hdf5')
+    model=tf.keras.models.load_model('/home/jhmbabo/catkin_ws/src/project_practice_1/src/sibal.hdf5')
+    #global model
+    num_img=num_img/255.0
     prediction=model.predict(num_img)
     print(prediction)
     result=[0]*num
     if num==0:
         return result
     for n in range(num):
-        print(n)
-        print(fine_list[n])
+        #print(n)
+        #print(fine_list[n])
         if n==0:
             temp_list=prediction[:fine_list[n]]
         else:
@@ -202,13 +204,14 @@ def detection(fine_list,num_img,num,label):
         for i,templist in enumerate(temp_list):
             if max(templist)<0.5:
                 result[num-1-n]=0
-            temp=np.argmax(templist)
-            res=temp.item()
+            else:
+                temp=np.argmax(templist)
+                res=temp.item()
             #print(type(res))
-            result[num-1-n]+=math.pow(10,label[n][i])*res
-    print(result)
+                result[num-1-n]+=math.pow(10,label[n][i])*res
+    print('result',result)
     return result
-    
+
 def callback(ros_image):
     print 'got an image'
     global bridge
@@ -216,8 +219,8 @@ def callback(ros_image):
         cv_image=bridge.imgmsg_to_cv2(ros_image,"bgr8")
     except CvBridgeError as e:
         print(e)
-    Lower=(60,100,100)
-    Upper=(80,250,250)
+    Lower=(40,50,90)
+    Upper=(70,255,255)
     mask=filter_color(cv_image,Lower,Upper)
     cv2.imshow('mask',mask)
     countours,hierarchy=get_contours(mask)
@@ -232,12 +235,15 @@ def callback(ros_image):
         print(pix.shape)
         #cv2.imshow('pix',pix)
         binary=toBinary(pix)
-        #cv2.imwrite("/home/jhmbabo/catkin_ws/src/numpy_tutorial/src/img/num_image_"+str(i*10+index)+".jpg",binary)
+        cv2.imwrite("/home/jhmbabo/catkin_ws/src/numpy_tutorial/src/img/num_image_"+str(7*10+index)+".jpg",binary)
+        binary=np.reshape(binary,(28,28,1))
+        new_num_image[index]=binary
     global result
     result=detection(fine_list,new_num_image,num,label)
     
-    cv2.waitKey(1)
-    #image_sub.unregister()
+    cv2.waitKey(10)
+    global image_sub
+    image_sub.unregister()
 
 def callback_1(ros_image):
     result=[]
@@ -248,10 +254,13 @@ def handler(req):
     global image_sub
     image_sub=rospy.Subscriber("/usb_cam/image_raw",Image,callback)
     input_num=req.input
+    input_num=float(input_num)
     for index,res in enumerate(result):
        if res==input_num:
             detect=True
             #depth
+            x=0.0
+            y=0.0
             
             return project_practice1Response(detect,x,y)
     detect=False
@@ -263,12 +272,15 @@ def handler(req):
 
 def main(args):
     rospy.init_node('preprocessing',anonymous=True)
-    server=rospy.Service('num_detection',project_practice1,handler)
+    #global image_sub
+    #image_sub=rospy.Subscriber("/usb_cam/image_raw",Image,callback)
     
+    server=rospy.Service('num_detection',project_practice1,handler,buff_size=10)
     try:
         rospy.spin()
     except KeyboardInterrupt:
         print "shutting down"
     cv2.destroyAllWindows()
+
 if __name__ == '__main__':
     main(sys.argv)

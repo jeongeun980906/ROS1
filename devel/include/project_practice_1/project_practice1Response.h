@@ -151,6 +151,7 @@ struct Definition< ::project_practice_1::project_practice1Response_<ContainerAll
     return "bool result\n"
 "float64 x\n"
 "float64 y\n"
+"\n"
 ;
   }
 
