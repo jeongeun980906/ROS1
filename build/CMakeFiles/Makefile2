@@ -2224,6 +2224,60 @@ laser_scanners_practice/preinstall:
 .PHONY : laser_scanners_practice/preinstall
 
 #=============================================================================
+# Directory level rules for directory meerkat_disciption
+
+# Convenience name for "all" pass in the directory.
+meerkat_disciption/all:
+
+.PHONY : meerkat_disciption/all
+
+# Convenience name for "clean" pass in the directory.
+meerkat_disciption/clean:
+
+.PHONY : meerkat_disciption/clean
+
+# Convenience name for "preinstall" pass in the directory.
+meerkat_disciption/preinstall:
+
+.PHONY : meerkat_disciption/preinstall
+
+#=============================================================================
+# Directory level rules for directory meerkat_env
+
+# Convenience name for "all" pass in the directory.
+meerkat_env/all:
+
+.PHONY : meerkat_env/all
+
+# Convenience name for "clean" pass in the directory.
+meerkat_env/clean:
+
+.PHONY : meerkat_env/clean
+
+# Convenience name for "preinstall" pass in the directory.
+meerkat_env/preinstall:
+
+.PHONY : meerkat_env/preinstall
+
+#=============================================================================
+# Directory level rules for directory meerkat_sim
+
+# Convenience name for "all" pass in the directory.
+meerkat_sim/all:
+
+.PHONY : meerkat_sim/all
+
+# Convenience name for "clean" pass in the directory.
+meerkat_sim/clean:
+
+.PHONY : meerkat_sim/clean
+
+# Convenience name for "preinstall" pass in the directory.
+meerkat_sim/preinstall:
+
+.PHONY : meerkat_sim/preinstall
+
+#=============================================================================
 # Directory level rules for directory opencv_practice
 
 # Convenience name for "all" pass in the directory.

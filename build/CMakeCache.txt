@@ -894,6 +894,24 @@ laserscan_lib_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;ge
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
+//Value Computed by CMake
+meerkat_disciption_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_disciption
+
+//Value Computed by CMake
+meerkat_disciption_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/meerkat_disciption
+
+//Value Computed by CMake
+meerkat_env_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_env
+
+//Value Computed by CMake
+meerkat_env_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/meerkat_env
+
+//Value Computed by CMake
+meerkat_sim_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_sim
+
+//Value Computed by CMake
+meerkat_sim_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/meerkat_sim
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
 
@@ -1485,7 +1503,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=29
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=32
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

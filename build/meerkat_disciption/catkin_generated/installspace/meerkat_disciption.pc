@@ -1,0 +1,8 @@
+prefix=/home/jhmbabo/catkin_ws/install
+
+Name: meerkat_disciption
+Description: Description of meerkat_disciption
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
