@@ -3,6 +3,6 @@ prefix=/home/jhmbabo/catkin_ws/install
 Name: meerkat_sim
 Description: Description of meerkat_sim
 Version: 0.0.0
-Cflags: 
+Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: rospy std_msgs sensor_msgs geometry_msgs nav_msgs tf gazebo_ros

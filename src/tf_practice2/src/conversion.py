@@ -20,7 +20,7 @@ quaternion=tf.transformations.quaternion_from_euler(roll,pitch,yaw)
 print 'The resulting quaternion using "quaternion_from_euler" function: '
 for i in range(4):
 	print quaternion[i]
-
+quaternion=[0.000870603531834,0.000870603531834,-0.546313138375,0.837579489778]
 rpy = tf.transformations.euler_from_quaternion(quaternion)
 roll_from_quaternion = rpy[0]
 pitch_from_quaternion = rpy[1]

@@ -9,6 +9,8 @@ project(meerkat_disciption)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
+  urdf
+  xacro
 )
 
 ## System dependencies are found with CMake's conventions
@@ -103,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES meerkat_disciption
-#  CATKIN_DEPENDS rospy
+  CATKIN_DEPENDS rospy urdf xacro
 #  DEPENDS system_lib
 )
 
@@ -151,7 +153,9 @@ include_directories(
 #############
 ## Install ##
 #############
-
+install(DIRECTORY meshes rviz urdf
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
 

@@ -124,17 +124,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/jhmbabo/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jhmbabo/catkin_ws/build/CMakeFiles /home/jhmbabo/catkin_ws/build/opencv_practice/CMakeFiles/progress.marks
@@ -513,7 +502,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... opencv_practice_generate_messages"
 	@echo "... opencv_practice_gencpp"
-	@echo "... test"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... opencv_practice_generate_messages_cpp"
 .PHONY : help
