@@ -21,6 +21,4 @@ if __name__ == "__main__":
     response = project_practice1_client(req)
     print(response)
     print(response.result)
-    print(response.x)
-    print(response.y)
-    rospy.spin()
+    print(response.dir)

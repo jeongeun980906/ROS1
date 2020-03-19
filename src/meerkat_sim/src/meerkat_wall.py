@@ -15,7 +15,7 @@ theta=0
 right=0.0
 left=0.0
 def preprocessing(ranges,theta):
-    print(theta)
+    #print(theta)
     if theta>=0 and theta<45:
         left=np.min(ranges[45-theta:135-theta])
         right=np.min(ranges[225-theta:315-theta])
@@ -46,7 +46,7 @@ def scan_callback(scan):
     global right
     global left
     left,right=preprocessing(ranges,theta)
-    print(left,right)
+    #print(left,right)
 
 def transformation(action):
     vel_msg=Twist()
@@ -116,7 +116,9 @@ def odometry(action):
         w=0.371747
     elif action==6:
         x=-0.05
-    return x,y,w
+    x_t=x*math.cos(w)-y*math.sin(w)
+    y_t=x*math.sin(w)+y*math.cos(w)
+    return x_t,y_t,w
 
 if __name__ == "__main__":
     try:
@@ -135,7 +137,7 @@ if __name__ == "__main__":
         w+=dw
         theta=int((-math.degrees(w))%360)
         print(theta)
-        print(right,left)
+        print(left)
         rospy.spin()
     except rospy.ROSInterruptException:
         rospy.loginfo("node terminated")

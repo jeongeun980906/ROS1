@@ -232,6 +232,96 @@ trajectory_msgs_generate_messages_cpp/fast:
 .PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_py: meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_py
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_py/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+.PHONY : trajectory_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+gazebo_msgs_generate_messages_py: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+
+.PHONY : gazebo_msgs_generate_messages_py
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_py/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
+.PHONY : gazebo_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+gazebo_msgs_generate_messages_nodejs: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : gazebo_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_nodejs/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
+.PHONY : gazebo_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+gazebo_msgs_generate_messages_lisp: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : gazebo_msgs_generate_messages_lisp
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_lisp/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
+.PHONY : gazebo_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+gazebo_msgs_generate_messages_cpp: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : gazebo_msgs_generate_messages_cpp
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_cpp/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
+.PHONY : gazebo_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+meerkat_sim/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_gencfg: meerkat_sim/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make meerkat_sim/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+# Convenience name for target.
 meerkat_sim/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
 	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : meerkat_sim/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
@@ -487,21 +577,6 @@ nav_msgs_generate_messages_cpp/fast:
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
-.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-gazebo_msgs_generate_messages_cpp: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : gazebo_msgs_generate_messages_cpp
-
-# fast build rule for target.
-gazebo_msgs_generate_messages_cpp/fast:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
-.PHONY : gazebo_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 meerkat_sim/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
 	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : meerkat_sim/CMakeFiles/tf_generate_messages_nodejs.dir/rule
@@ -727,64 +802,79 @@ std_srvs_generate_messages_py/fast:
 .PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
-meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
-.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-gazebo_msgs_generate_messages_lisp: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+dynamic_reconfigure_generate_messages_cpp: meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 
-.PHONY : gazebo_msgs_generate_messages_lisp
+.PHONY : dynamic_reconfigure_generate_messages_cpp
 
 # fast build rule for target.
-gazebo_msgs_generate_messages_lisp/fast:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
-.PHONY : gazebo_msgs_generate_messages_lisp/fast
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 # Convenience name for target.
-meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
-.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-gazebo_msgs_generate_messages_nodejs: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+dynamic_reconfigure_generate_messages_eus: meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
-.PHONY : gazebo_msgs_generate_messages_nodejs
+.PHONY : dynamic_reconfigure_generate_messages_eus
 
 # fast build rule for target.
-gazebo_msgs_generate_messages_nodejs/fast:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
-.PHONY : gazebo_msgs_generate_messages_nodejs/fast
+dynamic_reconfigure_generate_messages_eus/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
-meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
-.PHONY : meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_py: meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+dynamic_reconfigure_generate_messages_lisp: meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
-.PHONY : trajectory_msgs_generate_messages_py
+.PHONY : dynamic_reconfigure_generate_messages_lisp
 
 # fast build rule for target.
-trajectory_msgs_generate_messages_py/fast:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make meerkat_sim/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
-.PHONY : trajectory_msgs_generate_messages_py/fast
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
-meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
-.PHONY : meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-gazebo_msgs_generate_messages_py: meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+dynamic_reconfigure_generate_messages_nodejs: meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
-.PHONY : gazebo_msgs_generate_messages_py
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
 
 # fast build rule for target.
-gazebo_msgs_generate_messages_py/fast:
-	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make meerkat_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
-.PHONY : gazebo_msgs_generate_messages_py/fast
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+# Convenience name for target.
+meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/jhmbabo/catkin_ws/build && $(MAKE) -f meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make meerkat_sim/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 src/meerkat_drive.o: src/meerkat_drive.cpp.o
 
@@ -825,6 +915,12 @@ help:
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_py"
+	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... gazebo_msgs_generate_messages_nodejs"
+	@echo "... gazebo_msgs_generate_messages_lisp"
+	@echo "... gazebo_msgs_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... tf_generate_messages_eus"
@@ -844,7 +940,6 @@ help:
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... gazebo_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... install"
@@ -863,10 +958,11 @@ help:
 	@echo "... install/local"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_py"
-	@echo "... gazebo_msgs_generate_messages_lisp"
-	@echo "... gazebo_msgs_generate_messages_nodejs"
-	@echo "... trajectory_msgs_generate_messages_py"
-	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... src/meerkat_drive.o"
 	@echo "... src/meerkat_drive.i"
 	@echo "... src/meerkat_drive.s"

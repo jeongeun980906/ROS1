@@ -1,5 +1,4 @@
 int64 input
 ---
 bool result
-float64 x
-float64 y
+int64 dir

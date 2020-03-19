@@ -740,6 +740,12 @@ actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for amcl.
+amcl_DIR:PATH=/opt/ros/melodic/share/amcl/cmake
+
+//The directory containing a CMake configuration file for angles.
+angles_DIR:PATH=/opt/ros/melodic/share/angles/cmake
+
 //Value Computed by CMake
 assignment_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/assignment
 
@@ -758,11 +764,32 @@ bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/melodic/share/bondcpp/cmake
 
+//Value Computed by CMake
+cartpole_openai_ros_examples_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/cartpole_openai_ros_examples
+
+//Value Computed by CMake
+cartpole_openai_ros_examples_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/cartpole_openai_ros_examples
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/melodic/share/control_msgs/cmake
+
+//The directory containing a CMake configuration file for control_toolbox.
+control_toolbox_DIR:PATH=/opt/ros/melodic/share/control_toolbox/cmake
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/opt/ros/melodic/share/controller_interface/cmake
+
+//The directory containing a CMake configuration file for controller_manager.
+controller_manager_DIR:PATH=/opt/ros/melodic/share/controller_manager/cmake
+
+//The directory containing a CMake configuration file for controller_manager_msgs.
+controller_manager_msgs_DIR:PATH=/opt/ros/melodic/share/controller_manager_msgs/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
@@ -782,6 +809,15 @@ diagnostic_updater_DIR:PATH=/opt/ros/melodic/share/diagnostic_updater/cmake
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 
+//Value Computed by CMake
+fetch_openai_ros_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/fetch_openai_ros_example
+
+//Value Computed by CMake
+fetch_openai_ros_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/fetch_openai_ros_example
+
+//The directory containing a CMake configuration file for forward_command_controller.
+forward_command_controller_DIR:PATH=/opt/ros/melodic/share/forward_command_controller/cmake
+
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
 
@@ -793,6 +829,9 @@ gazebo_proto_msgs_lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
 
 //The directory containing a CMake configuration file for gazebo_ros.
 gazebo_ros_DIR:PATH=/opt/ros/melodic/share/gazebo_ros/cmake
+
+//The directory containing a CMake configuration file for gazebo_ros_control.
+gazebo_ros_control_DIR:PATH=/opt/ros/melodic/share/gazebo_ros_control/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
@@ -867,6 +906,15 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/melodic/share/hardware_interface/cmake
+
+//Value Computed by CMake
+husarion_openai_ros_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/husarion_openai_ros_example
+
+//Value Computed by CMake
+husarion_openai_ros_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/husarion_openai_ros_example
+
 //The directory containing a CMake configuration file for ignition-cmake0.
 ignition-cmake0_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-cmake0
 
@@ -891,6 +939,15 @@ image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake
 //The directory containing a CMake configuration file for interactive_markers.
 interactive_markers_DIR:PATH=/opt/ros/melodic/share/interactive_markers/cmake
 
+//Value Computed by CMake
+iriwam_openai_ros_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/iriwam_openai_ros_example
+
+//Value Computed by CMake
+iriwam_openai_ros_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/iriwam_openai_ros_example
+
+//The directory containing a CMake configuration file for joint_limits_interface.
+joint_limits_interface_DIR:PATH=/opt/ros/melodic/share/joint_limits_interface/cmake
+
 //The directory containing a CMake configuration file for jsoncpp.
 jsoncpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/jsoncpp
 
@@ -905,6 +962,9 @@ laserscan_lib_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;ge
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
+
+//The directory containing a CMake configuration file for map_server.
+map_server_DIR:PATH=/opt/ros/melodic/share/map_server/cmake
 
 //Value Computed by CMake
 meerkat_disciption_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_disciption
@@ -936,6 +996,60 @@ message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 //The directory containing a CMake configuration file for messeage_generation.
 messeage_generation_DIR:PATH=messeage_generation_DIR-NOTFOUND
 
+//The directory containing a CMake configuration file for move_base.
+move_base_DIR:PATH=/opt/ros/melodic/share/move_base/cmake
+
+//The directory containing a CMake configuration file for move_base_msgs.
+move_base_msgs_DIR:PATH=/opt/ros/melodic/share/move_base_msgs/cmake
+
+//Value Computed by CMake
+moving_cube_training_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/moving_cube_training
+
+//Value Computed by CMake
+moving_cube_training_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/moving_cube_training
+
+//Value Computed by CMake
+my_hopper_openai_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/my_hopper_openai_example
+
+//Value Computed by CMake
+my_hopper_openai_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_hopper_openai_example
+
+//Value Computed by CMake
+my_moving_cube_pkg_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/my_moving_cube_pkg
+
+//Value Computed by CMake
+my_moving_cube_pkg_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_moving_cube_pkg
+
+//Value Computed by CMake
+my_parrotdrone_openai_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/my_parrotdrone_openai_example
+
+//Value Computed by CMake
+my_parrotdrone_openai_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_parrotdrone_openai_example
+
+//Value Computed by CMake
+my_sawyer_openai_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/my_sawyer_openai_example
+
+//Value Computed by CMake
+my_sawyer_openai_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_sawyer_openai_example
+
+//Value Computed by CMake
+my_shadow_tc_openai_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/my_shadow_tc_openai_example
+
+//Value Computed by CMake
+my_shadow_tc_openai_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_shadow_tc_openai_example
+
+//Value Computed by CMake
+my_sumitxl_openai_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/my_sumitxl_openai_example
+
+//Value Computed by CMake
+my_sumitxl_openai_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_sumitxl_openai_example
+
+//Value Computed by CMake
+my_turtlebot3_openai_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/my_turtlebot3_openai_example
+
+//Value Computed by CMake
+my_turtlebot3_openai_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_turtlebot3_openai_example
+
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
 
@@ -952,6 +1066,45 @@ numpy_tutorial_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/numpy_tutorial
 onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat.so
 
 //Value Computed by CMake
+open_manipulator_description_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/open_manipulator/open_manipulator_description
+
+//Value Computed by CMake
+open_manipulator_description_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/open_manipulator/open_manipulator_description
+
+//Value Computed by CMake
+open_manipulator_gazebo_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/open_manipulator/open_manipulator_gazebo
+
+//Value Computed by CMake
+open_manipulator_gazebo_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/open_manipulator/open_manipulator_gazebo
+
+//Value Computed by CMake
+open_manipulator_moveit_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/open_manipulator/open_manipulator_moveit
+
+//Value Computed by CMake
+open_manipulator_moveit_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/open_manipulator/open_manipulator_moveit
+
+//Value Computed by CMake
+open_manipulator_msgs_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/open_manipulator/open_manipulator_msgs
+
+//Value Computed by CMake
+open_manipulator_msgs_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/open_manipulator/open_manipulator_msgs
+
+//Value Computed by CMake
+open_manipulator_with_tb3_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/open_manipulator/open_manipulator_with_tb3
+
+//Value Computed by CMake
+open_manipulator_with_tb3_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/open_manipulator/open_manipulator_with_tb3
+
+//Value Computed by CMake
+openai_ros_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_ros/openai_ros
+
+//The directory containing a CMake configuration file for openai_ros.
+openai_ros_DIR:PATH=/home/jhmbabo/catkin_ws/devel/share/openai_ros/cmake
+
+//Value Computed by CMake
+openai_ros_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_ros/openai_ros
+
+//Value Computed by CMake
 opencv_practice_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/opencv_practice
 
 //Value Computed by CMake
@@ -959,6 +1112,9 @@ opencv_practice_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/opencv_practice
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
+
+//The directory containing a CMake configuration file for position_controllers.
+position_controllers_DIR:PATH=/opt/ros/melodic/share/position_controllers/cmake
 
 //Value Computed by CMake
 project_practice_1_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/project_practice_1
@@ -1023,6 +1179,9 @@ realsense2_description_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/realsense
 //Value Computed by CMake
 realsense2_description_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/realsense-ros/realsense2_description
 
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/opt/ros/melodic/share/realtime_tools/cmake
+
 //Value Computed by CMake
 ros_essentials_cpp_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/ros_essentials_cpp
 
@@ -1040,6 +1199,12 @@ ros_tutorials_service_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/ros_tutori
 
 //Value Computed by CMake
 ros_tutorials_service_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/ros_tutorials_service
+
+//The directory containing a CMake configuration file for rosbag.
+rosbag_DIR:PATH=/opt/ros/melodic/share/rosbag/cmake
+
+//The directory containing a CMake configuration file for rosbag_storage.
+rosbag_storage_DIR:PATH=/opt/ros/melodic/share/rosbag_storage/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
@@ -1064,6 +1229,9 @@ rosgraph_msgs_DIR:PATH=/opt/ros/melodic/share/rosgraph_msgs/cmake
 
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/melodic/share/roslib/cmake
+
+//The directory containing a CMake configuration file for roslz4.
+roslz4_DIR:PATH=/opt/ros/melodic/share/roslz4/cmake
 
 //The directory containing a CMake configuration file for rospack.
 rospack_DIR:PATH=/opt/ros/melodic/share/rospack/cmake
@@ -1098,6 +1266,12 @@ std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/melodic/share/std_srvs/cmake
 
+//Value Computed by CMake
+t3_course_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/t3_course
+
+//Value Computed by CMake
+t3_course_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/t3_course
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/melodic/share/tf2/cmake
 
@@ -1122,8 +1296,20 @@ tf_practice2_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/tf_practice2
 //Value Computed by CMake
 tf_practice2_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/tf_practice2
 
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/opt/ros/melodic/share/topic_tools/cmake
+
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/melodic/share/trajectory_msgs/cmake
+
+//The directory containing a CMake configuration file for transmission_interface.
+transmission_interface_DIR:PATH=/opt/ros/melodic/share/transmission_interface/cmake
+
+//Value Computed by CMake
+turtle2_openai_ros_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/turtle2_openai_ros_example
+
+//Value Computed by CMake
+turtle2_openai_ros_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/turtle2_openai_ros_example
 
 //Value Computed by CMake
 turtlebot3_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/turtlebot3
@@ -1144,6 +1330,12 @@ turtlebot3_description_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot
 turtlebot3_description_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3/turtlebot3_description
 
 //Value Computed by CMake
+turtlebot3_dqn_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3_machine_learning/turtlebot3_dqn
+
+//Value Computed by CMake
+turtlebot3_dqn_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3_machine_learning/turtlebot3_dqn
+
+//Value Computed by CMake
 turtlebot3_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3/turtlebot3_example
 
 //Value Computed by CMake
@@ -1160,6 +1352,12 @@ turtlebot3_gazebo_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3_sim
 
 //Value Computed by CMake
 turtlebot3_gazebo_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo
+
+//Value Computed by CMake
+turtlebot3_machine_learning_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3_machine_learning/turtlebot3_machine_learning
+
+//Value Computed by CMake
+turtlebot3_machine_learning_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/turtlebot3_machine_learning/turtlebot3_machine_learning
 
 //Value Computed by CMake
 turtlebot3_msgs_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/turtlebot3_msgs
@@ -1220,6 +1418,18 @@ utility_lib_LIB_DEPENDS:STATIC=
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
+
+//Value Computed by CMake
+wamv_deep_qlearning_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/wamv_deep_qlearning
+
+//Value Computed by CMake
+wamv_deep_qlearning_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/wamv_deep_qlearning
+
+//Value Computed by CMake
+wamv_openai_ros_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/wamv_openai_ros_example
+
+//Value Computed by CMake
+wamv_openai_ros_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/wamv_openai_ros_example
 
 //The directory containing a CMake configuration file for xacro.
 xacro_DIR:PATH=/opt/ros/melodic/share/xacro/cmake
@@ -1551,7 +1761,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=35
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=49
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1619,7 +1829,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding Protobuf
 FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread;-lpthread][/usr/include][v3.0.0(2.3.0)]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.17()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.17(2)]
 //Details about finding SWSCALE
 FIND_PACKAGE_MESSAGE_DETAILS_SWSCALE:INTERNAL=[true][v()]
 //Details about finding Simbody

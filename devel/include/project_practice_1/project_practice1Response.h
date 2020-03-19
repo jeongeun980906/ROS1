@@ -25,13 +25,11 @@ struct project_practice1Response_
 
   project_practice1Response_()
     : result(false)
-    , x(0.0)
-    , y(0.0)  {
+    , dir(0)  {
     }
   project_practice1Response_(const ContainerAllocator& _alloc)
     : result(false)
-    , x(0.0)
-    , y(0.0)  {
+    , dir(0)  {
   (void)_alloc;
     }
 
@@ -40,11 +38,8 @@ struct project_practice1Response_
    typedef uint8_t _result_type;
   _result_type result;
 
-   typedef double _x_type;
-  _x_type x;
-
-   typedef double _y_type;
-  _y_type y;
+   typedef int64_t _dir_type;
+  _dir_type dir;
 
 
 
@@ -124,12 +119,12 @@ struct MD5Sum< ::project_practice_1::project_practice1Response_<ContainerAllocat
 {
   static const char* value()
   {
-    return "82f228b68f8b25d23f33219f5773eb3a";
+    return "b147b897e2ba88f6d1f90dd1a5b966d2";
   }
 
   static const char* value(const ::project_practice_1::project_practice1Response_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x82f228b68f8b25d2ULL;
-  static const uint64_t static_value2 = 0x3f33219f5773eb3aULL;
+  static const uint64_t static_value1 = 0xb147b897e2ba88f6ULL;
+  static const uint64_t static_value2 = 0xd1f90dd1a5b966d2ULL;
 };
 
 template<class ContainerAllocator>
@@ -149,8 +144,7 @@ struct Definition< ::project_practice_1::project_practice1Response_<ContainerAll
   static const char* value()
   {
     return "bool result\n"
-"float64 x\n"
-"float64 y\n"
+"int64 dir\n"
 "\n"
 ;
   }
@@ -171,8 +165,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.result);
-      stream.next(m.x);
-      stream.next(m.y);
+      stream.next(m.dir);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -193,10 +186,8 @@ struct Printer< ::project_practice_1::project_practice1Response_<ContainerAlloca
   {
     s << indent << "result: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.result);
-    s << indent << "x: ";
-    Printer<double>::stream(s, indent + "  ", v.x);
-    s << indent << "y: ";
-    Printer<double>::stream(s, indent + "  ", v.y);
+    s << indent << "dir: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.dir);
   }
 };
 

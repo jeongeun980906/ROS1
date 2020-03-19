@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_SensorState.py"
   "/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_VersionInfo.py"
   "/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/__init__.py"
+  "/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

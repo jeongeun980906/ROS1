@@ -3,8 +3,6 @@
           INPUT
           RESULT-VAL
           RESULT
-          X-VAL
-          X
-          Y-VAL
-          Y
+          DIR-VAL
+          DIR
 ))

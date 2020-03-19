@@ -20,19 +20,19 @@ def transformation(action):
         vel_msg.angular.z=-0.371747 #right
     elif action==2:
         vel_msg.linear.x=0.05
-        vel_msg.linear.z=0.0
+        vel_msg.angular.z=0.0
     elif action==3:
         vel_msg.linear.x=-0.05
-        vel_msg.linear.z=0.371747 #left
+        vel_msg.angular.z=0.371747 #left
     elif action==4:
         vel_msg.linear.x=0.05
-        vel_msg.linear.z=0.337109
+        vel_msg.angular.z=0.337109
     elif action==5:
         vel_msg.linear.x=-0.05
-        vel_msg.linear.z=0.00
+        vel_msg.angular.z=0.00
     elif action==6:
         vel_msg.linear.x=0.0
-        vel_msg.linear.z=0.0
+        vel_msg.angular.z=0.0
     return vel_msg
 def move(action):
     velocity_publisher=rospy.Publisher('/cmd_vel',Twist,queue_size=100)
@@ -51,28 +51,32 @@ def move(action):
         velocity_publisher.publish(vel_msg)
         loop_rate.sleep()
 def odometry(action):
-    x,y,w=0
+    x=0.0
+    y=0.0
+    w=0.0
     if action==0:
         x=0.048857
-        y=0.0091875
+        y=-0.0091875
         w=-0.371747
     elif action==1:
         x=0.049046
-        y=0.008344
+        y=-0.008344
         w=-0.337109
     elif action==2:
         x=0.5
     elif action==3:
         x=0.049046
-        y=-0.008344
+        y=0.008344
         w=0.337109
-    elif action==5:
+    elif action==4:
         x=0.048857
-        y=-0.0091875
+        y=0.0091875
         w=0.371747
     elif action==6:
         x=-0.05
-    return x,y,w
+    x_t=x*math.cos(w)-y*math.sin(w)
+    y_t=x*math.sin(w)+y*math.cos(w)
+    return x_t,y_t,w
 
 if __name__ == "__main__":
     try:
@@ -80,13 +84,17 @@ if __name__ == "__main__":
         velocity_publisher=rospy.Publisher('/cmd_vel',Twist,queue_size=100)
         action=[0,1,2,3,4,5]
         #action0:
-        print(action[1])
-        move(action[0])
-        x,y,w=0
-        dx,dy,dw=odometry(action[1])
+        #print(action[1])
+        move(action[4])
+        x=0
+        y=0
+        w=0
+        dx,dy,dw=odometry(action[0])
         x+=dx
         y+=dy
         w+=dw
+        print(x,y,w)
+        #y: -0.151689540557
         
         rospy.spin()
     except rospy.ROSInterruptException:

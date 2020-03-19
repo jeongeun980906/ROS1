@@ -16,6 +16,7 @@ from project_practice_1.srv import project_practice1Response
 
 bridge=CvBridge()
 result=[]
+centers=[]
 
 def filter_color(rgb_image,lower_bound_color,upper_bound_color):
     hsv_image=cv2.cvtColor(rgb_image,cv2.COLOR_BGR2HSV)
@@ -29,7 +30,8 @@ def get_contours(binary_image):
 def largecontour(rgb_image,contours,hierarchy):   
     #print(hierarchy)
     num=0
-    new_img=[]     
+    global centers
+    centers=[]     
     for index,c in enumerate(contours):
         area=cv2.contourArea(c)
         x,y,w,h=cv2.boundingRect(c)
@@ -38,18 +40,16 @@ def largecontour(rgb_image,contours,hierarchy):
             cv2.rectangle(rgb_image,(x,y),(x+w,y+h),(0,0,255),1)
             print index
             if hierarchy[0][index][3]==-1:
-                #print 'here'
-                temp=rgb_image[y:y+h,x:x+w]
-                temp=cv2.resize(temp,(160,160),interpolation=cv2.INTER_CUBIC)
-                #cv2.imshow('temp',temp)
-                new_img.append(temp)
+                pix_x=x+w/2
+                pix_y=y+h/2
+                center=[pix_x,pix_y]
+                centers.append(center)
                 num+=1
                 #depth info
     print("number of contours: {}".format(len(contours)))
     cv2.imshow("RGB Image Contours",rgb_image)
-    new_img_array=np.asarray(new_img)
     #print(new_img_array.shape)
-    return new_img_array,num
+    return centers,num
 
 def smallcontour(rgb_image,contours,hierarchy,yanglist):
     num_image=[]
@@ -225,7 +225,7 @@ def callback(ros_image):
     cv2.imshow('mask',mask)
     countours,hierarchy=get_contours(mask)
     yanglist=yangyang(hierarchy)
-    point,num=largecontour(cv_image,countours,hierarchy)
+    centers,num=largecontour(cv_image,countours,hierarchy)
     num_img,x_index=smallcontour(cv_image,countours,hierarchy,yanglist)
     fine_list=handle_hierarchy(hierarchy,countours,yanglist)
     label=sunseo(x_index,fine_list)
@@ -258,16 +258,15 @@ def handler(req):
     for index,res in enumerate(result):
        if res==input_num:
             detect=True
-            #depth
-            x=0.0
-            y=0.0
-            
-            return project_practice1Response(detect,x,y)
+            if centers[index][0]<320:
+                dire=1
+            else:
+                dire=2
+            return project_practice1Response(detect,dire)
     detect=False
-    x=0.0
-    y=0.0
+    dire=0
     
-    return project_practice1Response(detect,x,y)
+    return project_practice1Response(detect,dire)
 
 
 def main(args):

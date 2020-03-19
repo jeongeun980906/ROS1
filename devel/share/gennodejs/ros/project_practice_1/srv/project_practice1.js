@@ -93,8 +93,7 @@ class project_practice1Response {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.result = null;
-      this.x = null;
-      this.y = null;
+      this.dir = null;
     }
     else {
       if (initObj.hasOwnProperty('result')) {
@@ -103,17 +102,11 @@ class project_practice1Response {
       else {
         this.result = false;
       }
-      if (initObj.hasOwnProperty('x')) {
-        this.x = initObj.x
+      if (initObj.hasOwnProperty('dir')) {
+        this.dir = initObj.dir
       }
       else {
-        this.x = 0.0;
-      }
-      if (initObj.hasOwnProperty('y')) {
-        this.y = initObj.y
-      }
-      else {
-        this.y = 0.0;
+        this.dir = 0;
       }
     }
   }
@@ -122,10 +115,8 @@ class project_practice1Response {
     // Serializes a message object of type project_practice1Response
     // Serialize message field [result]
     bufferOffset = _serializer.bool(obj.result, buffer, bufferOffset);
-    // Serialize message field [x]
-    bufferOffset = _serializer.float64(obj.x, buffer, bufferOffset);
-    // Serialize message field [y]
-    bufferOffset = _serializer.float64(obj.y, buffer, bufferOffset);
+    // Serialize message field [dir]
+    bufferOffset = _serializer.int64(obj.dir, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -135,15 +126,13 @@ class project_practice1Response {
     let data = new project_practice1Response(null);
     // Deserialize message field [result]
     data.result = _deserializer.bool(buffer, bufferOffset);
-    // Deserialize message field [x]
-    data.x = _deserializer.float64(buffer, bufferOffset);
-    // Deserialize message field [y]
-    data.y = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [dir]
+    data.dir = _deserializer.int64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 17;
+    return 9;
   }
 
   static datatype() {
@@ -153,15 +142,14 @@ class project_practice1Response {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '82f228b68f8b25d23f33219f5773eb3a';
+    return 'b147b897e2ba88f6d1f90dd1a5b966d2';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     bool result
-    float64 x
-    float64 y
+    int64 dir
     
     
     `;
@@ -180,18 +168,11 @@ class project_practice1Response {
       resolved.result = false
     }
 
-    if (msg.x !== undefined) {
-      resolved.x = msg.x;
+    if (msg.dir !== undefined) {
+      resolved.dir = msg.dir;
     }
     else {
-      resolved.x = 0.0
-    }
-
-    if (msg.y !== undefined) {
-      resolved.y = msg.y;
-    }
-    else {
-      resolved.y = 0.0
+      resolved.dir = 0
     }
 
     return resolved;
@@ -201,6 +182,6 @@ class project_practice1Response {
 module.exports = {
   Request: project_practice1Request,
   Response: project_practice1Response,
-  md5sum() { return '7525b31207ccda06e56279e244da6731'; },
+  md5sum() { return '47de08ae0a6f75933f3d62b872331b10'; },
   datatype() { return 'project_practice_1/project_practice1'; }
 };

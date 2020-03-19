@@ -57,6 +57,7 @@ turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py: /home/jhmbabo/c
 turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_SensorState.py
 turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_VersionInfo.py
 turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/__init__.py
+turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv/__init__.py
 
 
 /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_Sound.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
@@ -82,11 +83,19 @@ turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py: /home/jhmbabo/c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jhmbabo/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for turtlebot3_msgs"
 	cd /home/jhmbabo/catkin_ws/build/turtlebot3_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg --initpy
 
+/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv/__init__.py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_Sound.py
+/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv/__init__.py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_SensorState.py
+/home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv/__init__.py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_VersionInfo.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jhmbabo/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for turtlebot3_msgs"
+	cd /home/jhmbabo/catkin_ws/build/turtlebot3_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv --initpy
+
 turtlebot3_msgs_generate_messages_py: turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py
 turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_Sound.py
 turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_SensorState.py
 turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/_VersionInfo.py
 turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/msg/__init__.py
+turtlebot3_msgs_generate_messages_py: /home/jhmbabo/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot3_msgs/srv/__init__.py
 turtlebot3_msgs_generate_messages_py: turtlebot3_msgs/CMakeFiles/turtlebot3_msgs_generate_messages_py.dir/build.make
 
 .PHONY : turtlebot3_msgs_generate_messages_py
