@@ -764,6 +764,12 @@ bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/melodic/share/bondcpp/cmake
 
+//The directory containing a CMake configuration file for camera_calibration_parsers.
+camera_calibration_parsers_DIR:PATH=/opt/ros/melodic/share/camera_calibration_parsers/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/opt/ros/melodic/share/camera_info_manager/cmake
+
 //Value Computed by CMake
 cartpole_openai_ros_examples_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/cartpole_openai_ros_examples
 
@@ -775,6 +781,9 @@ catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for cmake_modules.
+cmake_modules_DIR:PATH=/opt/ros/melodic/share/cmake_modules/cmake
 
 //The directory containing a CMake configuration file for control_msgs.
 control_msgs_DIR:PATH=/opt/ros/melodic/share/control_msgs/cmake
@@ -806,8 +815,26 @@ diagnostic_msgs_DIR:PATH=/opt/ros/melodic/share/diagnostic_msgs/cmake
 //The directory containing a CMake configuration file for diagnostic_updater.
 diagnostic_updater_DIR:PATH=/opt/ros/melodic/share/diagnostic_updater/cmake
 
+//Value Computed by CMake
+diff_wheeled_robot_control_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/chapter_4_codes/diff_wheeled_robot_control
+
+//Value Computed by CMake
+diff_wheeled_robot_control_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/chapter_4_codes/diff_wheeled_robot_control
+
+//Value Computed by CMake
+diff_wheeled_robot_gazebo_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/chapter_4_codes/diff_wheeled_robot_gazebo
+
+//Value Computed by CMake
+diff_wheeled_robot_gazebo_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/chapter_4_codes/diff_wheeled_robot_gazebo
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
+
+//Value Computed by CMake
+f1tenth-sim_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/simulator
+
+//Value Computed by CMake
+f1tenth-sim_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/simulator
 
 //Value Computed by CMake
 fetch_openai_ros_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/fetch_openai_ros_example
@@ -823,6 +850,9 @@ gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
 
 //The directory containing a CMake configuration file for gazebo_msgs.
 gazebo_msgs_DIR:PATH=/opt/ros/melodic/share/gazebo_msgs/cmake
+
+//The directory containing a CMake configuration file for gazebo_plugins.
+gazebo_plugins_DIR:PATH=/opt/ros/melodic/share/gazebo_plugins/cmake
 
 //Path to a library.
 gazebo_proto_msgs_lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
@@ -948,8 +978,17 @@ iriwam_openai_ros_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_e
 //The directory containing a CMake configuration file for joint_limits_interface.
 joint_limits_interface_DIR:PATH=/opt/ros/melodic/share/joint_limits_interface/cmake
 
+//The directory containing a CMake configuration file for joint_state_controller.
+joint_state_controller_DIR:PATH=/opt/ros/melodic/share/joint_state_controller/cmake
+
+//The directory containing a CMake configuration file for joy.
+joy_DIR:PATH=/opt/ros/melodic/share/joy/cmake
+
 //The directory containing a CMake configuration file for jsoncpp.
 jsoncpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/jsoncpp
+
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
 
 //Value Computed by CMake
 laser_scanners_practice_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/laser_scanners_practice
@@ -963,8 +1002,32 @@ laserscan_lib_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libcv_bridge.so;ge
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
+//Value Computed by CMake
+m2wr_description_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/two-wheeled-robot-simulation/m2wr_description
+
+//Value Computed by CMake
+m2wr_description_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/two-wheeled-robot-simulation/m2wr_description
+
+//The directory containing a CMake configuration file for map_msgs.
+map_msgs_DIR:PATH=/opt/ros/melodic/share/map_msgs/cmake
+
 //The directory containing a CMake configuration file for map_server.
 map_server_DIR:PATH=/opt/ros/melodic/share/map_server/cmake
+
+//Value Computed by CMake
+mastering_ros_robot_description_pkg_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/mastering_ros_robot_description_pkg
+
+//The directory containing a CMake configuration file for mastering_ros_robot_description_pkg.
+mastering_ros_robot_description_pkg_DIR:PATH=/home/jhmbabo/catkin_ws/devel/share/mastering_ros_robot_description_pkg/cmake
+
+//Value Computed by CMake
+mastering_ros_robot_description_pkg_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/mastering_ros_robot_description_pkg
+
+//Value Computed by CMake
+meekat_description_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meekat_description
+
+//Value Computed by CMake
+meekat_description_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/meekat_description
 
 //Value Computed by CMake
 meerkat_disciption_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_disciption
@@ -977,6 +1040,12 @@ meerkat_env_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_env
 
 //Value Computed by CMake
 meerkat_env_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/meerkat_env
+
+//Value Computed by CMake
+meerkat_rl_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_rl
+
+//Value Computed by CMake
+meerkat_rl_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/meerkat_rl
 
 //Value Computed by CMake
 meerkat_sim_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/meerkat_sim
@@ -1001,6 +1070,9 @@ move_base_DIR:PATH=/opt/ros/melodic/share/move_base/cmake
 
 //The directory containing a CMake configuration file for move_base_msgs.
 move_base_msgs_DIR:PATH=/opt/ros/melodic/share/move_base_msgs/cmake
+
+//The directory containing a CMake configuration file for moveit_core.
+moveit_core_DIR:PATH=moveit_core_DIR-NOTFOUND
 
 //Value Computed by CMake
 moving_cube_training_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/openai_examples_projects/moving_cube_training
@@ -1049,6 +1121,12 @@ my_turtlebot3_openai_example_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/ope
 
 //Value Computed by CMake
 my_turtlebot3_openai_example_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/openai_examples_projects/my_turtlebot3_openai_example
+
+//Value Computed by CMake
+my_worlds_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/two-wheeled-robot-simulation/my_worlds
+
+//Value Computed by CMake
+my_worlds_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/two-wheeled-robot-simulation/my_worlds
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
@@ -1182,6 +1260,9 @@ realsense2_description_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/realsense-r
 //The directory containing a CMake configuration file for realtime_tools.
 realtime_tools_DIR:PATH=/opt/ros/melodic/share/realtime_tools/cmake
 
+//The directory containing a CMake configuration file for resource_retriever.
+resource_retriever_DIR:PATH=/opt/ros/melodic/share/resource_retriever/cmake
+
 //Value Computed by CMake
 ros_essentials_cpp_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/ros_essentials_cpp
 
@@ -1251,8 +1332,23 @@ rplidar_ros_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/rplidar_ros
 //Value Computed by CMake
 rplidar_ros_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/rplidar_ros
 
+//The directory containing a CMake configuration file for rviz.
+rviz_DIR:PATH=/opt/ros/melodic/share/rviz/cmake
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
+
+//Value Computed by CMake
+seven_dof_arm_config_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/chapter_4_codes/seven_dof_arm_config
+
+//Value Computed by CMake
+seven_dof_arm_config_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/chapter_4_codes/seven_dof_arm_config
+
+//Value Computed by CMake
+seven_dof_arm_test_BINARY_DIR:STATIC=/home/jhmbabo/catkin_ws/build/chapter_4_codes/seven_dof_arm_test
+
+//Value Computed by CMake
+seven_dof_arm_test_SOURCE_DIR:STATIC=/home/jhmbabo/catkin_ws/src/chapter_4_codes/seven_dof_arm_test
 
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/melodic/share/smclib/cmake
@@ -1761,7 +1857,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=49
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=55
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

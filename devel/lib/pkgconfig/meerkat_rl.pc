@@ -1,0 +1,8 @@
+prefix=/home/jhmbabo/catkin_ws/devel
+
+Name: meerkat_rl
+Description: Description of meerkat_rl
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -142,13 +142,13 @@ class ReinforceAgent():
         self.model.fit(X_batch, Y_batch, batch_size=self.batch_size, epochs=1, verbose=0)
 
 if __name__ == '__main__':
-    rospy.init_node('turtlebot3_dqn_stage_1')
+    rospy.init_node('turtlebot3_dqn_stage_2')
     pub_result = rospy.Publisher('result', Float32MultiArray, queue_size=5)
     pub_get_action = rospy.Publisher('get_action', Float32MultiArray, queue_size=5)
     result = Float32MultiArray()
     get_action = Float32MultiArray()
 
-    state_size = 28
+    state_size = 364
     action_size = 5
 
     env = Env(action_size)
@@ -161,6 +161,7 @@ if __name__ == '__main__':
     for e in range(agent.load_episode + 1, EPISODES):
         done = False
         state = env.reset()
+        #print(state)
         score = 0
         for t in range(agent.episode_step):
             action = agent.getAction(state)

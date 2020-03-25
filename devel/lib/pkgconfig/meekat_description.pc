@@ -1,0 +1,8 @@
+prefix=/home/jhmbabo/catkin_ws/devel
+
+Name: meekat_description
+Description: Description of meekat_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
