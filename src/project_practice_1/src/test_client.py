@@ -14,11 +14,13 @@ def project_practice1_client(req):
         return resp1
     except rospy.ServiceException, e:
         print "Service call failed: %s"%e
-
-if __name__ == "__main__":
+def main():
     req=213
     rospy.init_node('test_server',anonymous=True)
     response = project_practice1_client(req)
-    print(response)
-    print(response.result)
-    print(response.dir)
+    res=False
+    while(res==False):
+        res=response.result
+        #go stra
+if __name__ == "__main__":
+    main()

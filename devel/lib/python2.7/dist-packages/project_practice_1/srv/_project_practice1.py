@@ -113,15 +113,14 @@ import struct
 
 
 class project_practice1Response(genpy.Message):
-  _md5sum = "b147b897e2ba88f6d1f90dd1a5b966d2"
+  _md5sum = "eb13ac1f1354ccecb7941ee8fa2192e8"
   _type = "project_practice_1/project_practice1Response"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """bool result
-int64 dir
 
 """
-  __slots__ = ['result','dir']
-  _slot_types = ['bool','int64']
+  __slots__ = ['result']
+  _slot_types = ['bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -131,7 +130,7 @@ int64 dir
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       result,dir
+       result
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -142,11 +141,8 @@ int64 dir
       #message fields cannot be None, assign default values for those that are
       if self.result is None:
         self.result = False
-      if self.dir is None:
-        self.dir = 0
     else:
       self.result = False
-      self.dir = 0
 
   def _get_types(self):
     """
@@ -160,8 +156,7 @@ int64 dir
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self
-      buff.write(_get_struct_Bq().pack(_x.result, _x.dir))
+      buff.write(_get_struct_B().pack(self.result))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -172,10 +167,9 @@ int64 dir
     """
     try:
       end = 0
-      _x = self
       start = end
-      end += 9
-      (_x.result, _x.dir,) = _get_struct_Bq().unpack(str[start:end])
+      end += 1
+      (self.result,) = _get_struct_B().unpack(str[start:end])
       self.result = bool(self.result)
       return self
     except struct.error as e:
@@ -189,8 +183,7 @@ int64 dir
     :param numpy: numpy python module
     """
     try:
-      _x = self
-      buff.write(_get_struct_Bq().pack(_x.result, _x.dir))
+      buff.write(_get_struct_B().pack(self.result))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -202,10 +195,9 @@ int64 dir
     """
     try:
       end = 0
-      _x = self
       start = end
-      end += 9
-      (_x.result, _x.dir,) = _get_struct_Bq().unpack(str[start:end])
+      end += 1
+      (self.result,) = _get_struct_B().unpack(str[start:end])
       self.result = bool(self.result)
       return self
     except struct.error as e:
@@ -215,14 +207,14 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_Bq = None
-def _get_struct_Bq():
-    global _struct_Bq
-    if _struct_Bq is None:
-        _struct_Bq = struct.Struct("<Bq")
-    return _struct_Bq
+_struct_B = None
+def _get_struct_B():
+    global _struct_B
+    if _struct_B is None:
+        _struct_B = struct.Struct("<B")
+    return _struct_B
 class project_practice1(object):
   _type          = 'project_practice_1/project_practice1'
-  _md5sum = '47de08ae0a6f75933f3d62b872331b10'
+  _md5sum = 'e735d79d25abc25212525470bd97937f'
   _request_class  = project_practice1Request
   _response_class = project_practice1Response

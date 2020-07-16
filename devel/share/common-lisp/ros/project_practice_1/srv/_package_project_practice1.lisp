@@ -3,6 +3,4 @@
           INPUT
           RESULT-VAL
           RESULT
-          DIR-VAL
-          DIR
 ))

@@ -32,7 +32,8 @@ class Respawn():
                                                 'turtlebot3_simulations/turtlebot3_gazebo/models/turtlebot3_square/goal_box/model.sdf')
         self.f = open(self.modelPath, 'r')
         self.model = self.f.read()
-        self.stage = rospy.get_param('/stage_number')
+        #self.stage = rospy.get_param('/stage_number')
+        self.stage=2
         self.goal_position = Pose()
         self.init_goal_x = 0.6
         self.init_goal_y = 0.0

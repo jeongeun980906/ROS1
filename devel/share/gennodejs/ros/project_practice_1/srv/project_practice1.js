@@ -93,7 +93,6 @@ class project_practice1Response {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.result = null;
-      this.dir = null;
     }
     else {
       if (initObj.hasOwnProperty('result')) {
@@ -102,12 +101,6 @@ class project_practice1Response {
       else {
         this.result = false;
       }
-      if (initObj.hasOwnProperty('dir')) {
-        this.dir = initObj.dir
-      }
-      else {
-        this.dir = 0;
-      }
     }
   }
 
@@ -115,8 +108,6 @@ class project_practice1Response {
     // Serializes a message object of type project_practice1Response
     // Serialize message field [result]
     bufferOffset = _serializer.bool(obj.result, buffer, bufferOffset);
-    // Serialize message field [dir]
-    bufferOffset = _serializer.int64(obj.dir, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -126,13 +117,11 @@ class project_practice1Response {
     let data = new project_practice1Response(null);
     // Deserialize message field [result]
     data.result = _deserializer.bool(buffer, bufferOffset);
-    // Deserialize message field [dir]
-    data.dir = _deserializer.int64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 9;
+    return 1;
   }
 
   static datatype() {
@@ -142,14 +131,13 @@ class project_practice1Response {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'b147b897e2ba88f6d1f90dd1a5b966d2';
+    return 'eb13ac1f1354ccecb7941ee8fa2192e8';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     bool result
-    int64 dir
     
     
     `;
@@ -168,13 +156,6 @@ class project_practice1Response {
       resolved.result = false
     }
 
-    if (msg.dir !== undefined) {
-      resolved.dir = msg.dir;
-    }
-    else {
-      resolved.dir = 0
-    }
-
     return resolved;
     }
 };
@@ -182,6 +163,6 @@ class project_practice1Response {
 module.exports = {
   Request: project_practice1Request,
   Response: project_practice1Response,
-  md5sum() { return '47de08ae0a6f75933f3d62b872331b10'; },
+  md5sum() { return 'e735d79d25abc25212525470bd97937f'; },
   datatype() { return 'project_practice_1/project_practice1'; }
 };

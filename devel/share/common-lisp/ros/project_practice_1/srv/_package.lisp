@@ -1,6 +1,11 @@
 (cl:defpackage project_practice_1-srv
   (:use )
   (:export
+   "GO_NUM"
+   "<GO_NUM-REQUEST>"
+   "GO_NUM-REQUEST"
+   "<GO_NUM-RESPONSE>"
+   "GO_NUM-RESPONSE"
    "PROJECT_PRACTICE1"
    "<PROJECT_PRACTICE1-REQUEST>"
    "PROJECT_PRACTICE1-REQUEST"

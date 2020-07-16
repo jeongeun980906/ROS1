@@ -7,11 +7,12 @@ import time
 import sys
 from collections import deque
 import tensorflow as tf
-from environment import Env
+from environment2 import Env
 from keras import Model
 from keras import layers,Input
 from keras.optimizers import Adam
-EPISODES = 5000
+import matplotlib.pyplot as plt
+EPISODES = 10000
 
 class DQNAgent():
     def __init__(self, scan_size,point_size, action_size):
@@ -28,7 +29,7 @@ class DQNAgent():
         self.discount_factor = 0.99
         self.learning_rate = 0.0025
         self.epsilon = 1.0
-        self.epsilon_decay = 0.99
+        self.epsilon_decay = 0.9995
         self.epsilon_min = 0.05
         self.batch_size = 64
         self.train_start = 64
@@ -50,7 +51,8 @@ class DQNAgent():
         s2=layers.Dense(64,activation='relu',kernel_initializer='lecun_uniform')(s1)
         s3=layers.Dense(32,activation='relu',kernel_initializer='lecun_uniform')(s2)
         p1=layers.Dense(32,activation='relu',kernel_initializer='lecun_uniform')(point_input)
-        concatenated=layers.concatenate([s3,p1],axis=-1)
+        p2=layers.Dense(64,activation='relu',kernel_initializer='lecun_uniform')(p1)
+        concatenated=layers.concatenate([s3,p2],axis=-1)
         c2=layers.Dense(16,activation='relu',kernel_initializer='lecun_uniform')(concatenated)
         value=layers.Dense(self.action_size,activation='linear',kernel_initializer='lecun_uniform')(c2)
         model=Model([scan_input,point_input],value)
@@ -135,11 +137,9 @@ if __name__ == '__main__':
         #print(state)
         score = 0
         for t in range(agent.episode_step):
-            print('step')
-            print(scan.shape,point)
+	    print(point)
             action = agent.getAction(scan,point)
-
-            next_scan,next_point, reward, done = env.step(action)
+            next_scan, next_point, reward, done = env.step(action)
             print('reward:' ,reward)
             agent.appendMemory(scan,point, action, reward, next_scan,next_point, done)
 
@@ -150,7 +150,7 @@ if __name__ == '__main__':
             score += reward
             scan = next_scan
             point=next_point
-            if t > 500:
+            if t > 100:
                 rospy.loginfo("Time out.")
                 done = True
 
@@ -174,3 +174,5 @@ if __name__ == '__main__':
 
         if agent.epsilon > agent.epsilon_min:
             agent.epsilon *= agent.epsilon_decay
+    plt.plot(scores)
+    plt.show()

@@ -24,12 +24,10 @@ struct project_practice1Response_
   typedef project_practice1Response_<ContainerAllocator> Type;
 
   project_practice1Response_()
-    : result(false)
-    , dir(0)  {
+    : result(false)  {
     }
   project_practice1Response_(const ContainerAllocator& _alloc)
-    : result(false)
-    , dir(0)  {
+    : result(false)  {
   (void)_alloc;
     }
 
@@ -37,9 +35,6 @@ struct project_practice1Response_
 
    typedef uint8_t _result_type;
   _result_type result;
-
-   typedef int64_t _dir_type;
-  _dir_type dir;
 
 
 
@@ -119,12 +114,12 @@ struct MD5Sum< ::project_practice_1::project_practice1Response_<ContainerAllocat
 {
   static const char* value()
   {
-    return "b147b897e2ba88f6d1f90dd1a5b966d2";
+    return "eb13ac1f1354ccecb7941ee8fa2192e8";
   }
 
   static const char* value(const ::project_practice_1::project_practice1Response_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xb147b897e2ba88f6ULL;
-  static const uint64_t static_value2 = 0xd1f90dd1a5b966d2ULL;
+  static const uint64_t static_value1 = 0xeb13ac1f1354ccecULL;
+  static const uint64_t static_value2 = 0xb7941ee8fa2192e8ULL;
 };
 
 template<class ContainerAllocator>
@@ -144,7 +139,6 @@ struct Definition< ::project_practice_1::project_practice1Response_<ContainerAll
   static const char* value()
   {
     return "bool result\n"
-"int64 dir\n"
 "\n"
 ;
   }
@@ -165,7 +159,6 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.result);
-      stream.next(m.dir);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -186,8 +179,6 @@ struct Printer< ::project_practice_1::project_practice1Response_<ContainerAlloca
   {
     s << indent << "result: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.result);
-    s << indent << "dir: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.dir);
   }
 };
 
